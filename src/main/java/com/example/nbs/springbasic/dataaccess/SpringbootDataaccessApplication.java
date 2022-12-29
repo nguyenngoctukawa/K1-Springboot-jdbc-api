@@ -1,5 +1,8 @@
-package com.example.nbs.springbasic.springboot_jdbc_api;
+package com.example.nbs.springbasic.dataaccess;
 
+import com.example.nbs.springbasic.dataaccess.SpringJdbcApi.Player;
+import com.example.nbs.springbasic.dataaccess.SpringJdbcApi.PlayerDAO;
+import com.example.nbs.springbasic.dataaccess.SpringJdbcApi.TournamentDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.sql.Date;
 
 @SpringBootApplication
-public class SpringbootJdbcApiApplication implements CommandLineRunner {// implements commandLineRunner =>
+public class SpringbootDataaccessApplication implements CommandLineRunner {// implements commandLineRunner =>
 	//  Public void Run
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
@@ -42,7 +45,7 @@ public class SpringbootJdbcApiApplication implements CommandLineRunner {// imple
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootJdbcApiApplication.class, args);
+		SpringApplication.run(SpringbootDataaccessApplication.class, args);
 	}
 
 }
