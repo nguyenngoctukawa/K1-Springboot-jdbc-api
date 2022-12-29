@@ -15,8 +15,11 @@ public class SpringbootJdbcApiApplication implements CommandLineRunner {
 
 	@Autowired
 	PlayerDAO playerDao;
+	@Autowired
+	TournamentDAO tournamentDAO;
 	@Override
 	public void run(String... args) throws Exception {
+		tournamentDAO.createTournamentTable();
 		logger.info("Inserting Player 4: {}", playerDao.insertPlayer(
 				new Player (4, "Thiem", "Austria", new Date(System.currentTimeMillis()), 17 ))
 		);
