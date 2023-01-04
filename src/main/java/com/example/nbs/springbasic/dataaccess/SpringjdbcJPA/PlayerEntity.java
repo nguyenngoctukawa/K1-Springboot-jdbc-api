@@ -1,14 +1,12 @@
 package com.example.nbs.springbasic.dataaccess.SpringjdbcJPA;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.Date;
 
 @Entity
 @Table(name="PlayerTable")
+@NamedQuery(name="get_all_players", query="select p from PlayerEntity p")
 public class PlayerEntity {
     @Id
     @GeneratedValue
